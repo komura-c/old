@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,700);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/* フォントを指定したいところで font-family: 'Noto Sans JP'; */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+body {
+  padding-top: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar {
+  padding: 0.8rem;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #563d7c;
+}
+
+.btn-primary:hover {
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-github {
+  color: #3f3f3f;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter:hover,
+.fa-github:hover, 
+.fa-facebook:hover {
+  color: #d5d5d5;
+}
+
+.fa-code {
+  color: #e54d26;
+}
+
+.fa-css3 {
+  color: #2163af;
+}
+
+.fa-bold {
+  color: #563d7c;
+}
+
+.fa-gem {
+  color: #ff4500;
+}
+
+.fa-python {
+  color: #FFA500;
+}
+
+.fa-code, .fa-css3, .fa-bold, .fa-gem, .fa-python {
+  font-size: 2em;
+  margin: 1rem;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+footer a {
+  color: #d5d5d5;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .social a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .social a {
+    font-size: 2em;
+    padding: 0.7rem;
+  }
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
