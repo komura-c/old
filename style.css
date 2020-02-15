@@ -47,9 +47,13 @@ ul {
   padding-bottom: 2rem;
 }
 
+.social {
+  padding: 0;
+}
+
 .social a {
-  font-size: 4.5em;
-  padding: 3rem;
+  font-size: 3em;
+  margin: 3rem;
 }
 
 .fa-twitter {
@@ -60,13 +64,7 @@ ul {
   color: #3f3f3f;
 }
 
-.fa-facebook {
-  color: #3b5998;
-}
-
-.fa-twitter:hover,
-.fa-github:hover, 
-.fa-facebook:hover {
+.fa-github:hover {
   color: #d5d5d5;
 }
 
@@ -106,28 +104,16 @@ footer a {
 }
 
 /*---Media Queries --*/
-@media (max-width: 992px) {
-  .social a {
-    font-size: 4em;
-    padding: 2rem;
-  }
+/* @media (max-width: 992px) {
 }
 @media (max-width: 768px) {
-  .social a {
-    font-size: 2.5em;
-    padding: 1.2rem;
-  }
 }
 @media (max-width: 576px) {
-  .social a {
-    font-size: 2em;
-    padding: 0.7rem;
-  }
-}
+} */
 
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 /*
