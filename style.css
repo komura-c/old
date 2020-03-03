@@ -21,6 +21,10 @@ ul {
   list-style: none;
 }
 
+img {
+  padding: 1em;
+}
+
 .navbar {
   padding: 0.8rem;
 }
