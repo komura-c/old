@@ -1,64 +1,148 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,700);
-@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
-/* フォントを指定したいところで font-family: 'Noto Sans JP'; */
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
+*, *:before, *:after {
+  box-sizing: border-box
 }
 
-body {
-  padding-top: 100px;
+html, body {
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #565656;
+  background: linear-gradient(25deg, #F13F79, #FFC778, #ff8c00) no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+  padding: 0.2em 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
+h1 {
+  font-size: 2em;
 }
 
-img {
-  width: 60%;
-  padding: 1em;
+h2 {
+  font-size: 2em;
 }
 
-.navbar {
-  padding: 0.8rem;
+h3 {
+  font-size: 1.8em;
 }
 
-.navbar-nav li {
-  padding-right: 20px;
+p {
+  font-size: 1.2em;
 }
 
-.nav-link {
-  font-size: 1.1em !important;
+hr {
+  color: #565656;
+  width: 80%;
 }
 
-.btn-primary {
-  background-color: #6648b1;
-  border: 1px solid #563d7c;
+header {
+  position: relative;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
 }
 
-.btn-primary:hover {
-  background-color: #563d7c;
-  border: 1px solid #563d7c;
+header img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1280px;
 }
 
-.padding {
-  padding-bottom: 2rem;
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  background-color: #565656;
+  margin-left: -279px;
+  overflow: hidden;
+}
+
+nav h1 {
+  padding: 0.1em 0;
+  letter-spacing: 0.1em;
+}
+
+nav a {
+  font-size: 1.6em;
+  padding: 0 1em;
+  line-height: 1.7;
+  float: left;
+  transition: all 0.5s;
+}
+
+nav a:link {
+  color: #fff;
+}
+
+nav a:visited {
+  color: #fff;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+nav a:active {
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+  padding: 0.8em;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 1.6em;
+  margin: 0.3em auto;
+  border-radius: 2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#profile,#product,#music,#contact {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+.profile__left {
+  grid-column: 1;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.profile__left img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.profile__right {
+  grid-column: 2;
+}
+
+.profile__right h3 {
+  padding-top: 0.5em;
 }
 
 .social {
-  padding: 0;
+  white-space: nowrap;
 }
 
 .social a {
   font-size: 3em;
-  margin: 3rem;
+  margin: 0.5em;
 }
 
 .fa-twitter {
@@ -69,71 +153,328 @@ img {
   color: #3f3f3f;
 }
 
-.fa-github:hover {
+.fa-stack {
+  font-size: 0.5em;
+  color:#4cb10d;
+}
+
+.fa-twitter:hover, .fa-github:hover, .fa-stack:hover {
   color: #d5d5d5;
 }
 
-.fa-code {
-  color: #e54d26;
+.product__list {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.fa-css3 {
-  color: #2163af;
+.production {
+  width: 100%;
 }
 
-.fa-bold {
-  color: #563d7c;
+.production img{
+  height: 100%;
+  transition: all 0.5s;
 }
 
-.fa-gem {
-  color: #ff4500;
+.production label {
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  cursor :pointer;
+  height: 15em;
+  text-align: center;
+  border-radius: 2em;
 }
 
-.fa-python {
-  color: #FFA500;
+.production input {
+  display: none;
 }
 
-.fa-code, .fa-css3, .fa-bold, .fa-gem, .fa-python {
-  font-size: 2em;
-  margin: 1rem;
+.production img:hover {
+  border: solid 0.5em #565656;
+}
+
+/*中身を非表示にしておく*/
+.production .accshow {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.cssacc:checked + .accshow {
+  height: auto;
+  padding: 10px;
+  background: #eaeaea;
+  opacity: 1;
+}
+
+dl {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+dt{
+  float: left;
+  clear: left;
+}
+
+dd{
+  margin-left: 100px;
+}
+
+.music__list {
+  text-align: center;
+}
+
+.music__list span {
+  background-color: #ff5500;
+  border-radius: 2em;
+}
+
+.soundcloud {
+  padding: 0.1em 1em;
+  transition: all 0.5s;
+}
+
+.soundcloud:visited {
+  color: #fff;
+}
+
+.soundcloud:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact__list {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.my-email {
+  width: 40%;
+  background-color: #d5d5d5;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact__list span {
+  background-color: #00aced;
+  border-radius: 2em;
+}
+
+.twitter {
+  padding: 0.1em 1em;
+  transition: all 0.5s;
+}
+
+.twitter:visited {
+  color: #fff;
+}
+
+.twitter:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 footer {
-  background-color: #3f3f3f;
-  color: #d5d5d5;
-  padding-top: 2rem;
+  background-color: #565656;
+  color: #fff;
+  padding: 1.5em;
+  margin-top: 1em;
+  text-align: center;
 }
 
-footer a {
-  color: #d5d5d5;
+.bg-css {
+  padding: 0;
+  margin: 0;
 }
 
-/*---Media Queries --*/
+.music-notes li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  font-size: 15em;
+  color: rgba(255, 255, 255, 0.8);
+  animation: float-up 35s linear infinite;
+  bottom: -1200px;
+}
+
+.music-notes li:nth-child(1){
+  left: 0%;
+  font-size: 10em;
+  animation-delay: 0s;
+}
+
+.music-notes li:nth-child(2){
+  left: 100%;
+  font-size: 1em;
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+
+.music-notes li:nth-child(3){
+  left: 3%;
+  font-size: 3em;
+  animation-delay: 4s;
+}
+
+.music-notes li:nth-child(4){
+  left: 97%;
+  font-size: 5em;
+  animation-delay: 6s;
+  animation-duration: 18s;
+}
+
+.music-notes li:nth-child(5){
+  left: 6%;
+  font-size: 6em;
+  animation-delay: 2s;
+}
+
+.music-notes li:nth-child(6){
+  left: 94%;
+  font-size: 8em;
+  animation-delay: 4s;
+}
+
+.music-notes li:nth-child(7){
+  left: 9%;
+  font-size: 7em;
+  animation-delay: 6s;
+}
+
+.music-notes li:nth-child(8){
+  left: 91%;
+  font-size: 2em;
+  animation-delay: 2s;
+  animation-duration: 19s;
+}
+
+.music-notes li:nth-child(9){
+  left: 12%;
+  font-size: 4em;
+  animation-delay: 4s;
+  animation-duration: 13s;
+}
+
+.music-notes li:nth-child(10){
+  left: 88%;
+  font-size: 9em;
+  animation-delay: 6s;
+  animation-duration: 11s;
+}
+
 /* @media (max-width: 992px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 576px) {
 } */
 
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-    padding: 0.5rem;
+@media (max-width: 768px) {
+  header img {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+  nav a {
+    font-size: 1.4em;
+    padding: 0 1.2em;
+  }
+  nav a:first-of-type {
+    margin-left: 2em;
+  }
+  #profile p br{
+    display: none;
+  }
+  .social {
+    white-space: normal;
+  }
+  .bg-css {
+    display: none;
+  }
 }
 
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+  
+  p {
+    font-size: 1em;
+  }
+  nav a {
+    font-size: 1.2em;
+    padding: 0.5em 1.2em;
+  }
+  nav a:first-of-type {
+    margin-left: 0;
+  }
+  .contact__list {
+    font-size: 1em;
+  }
+}
 
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+@media (max-width: 450px) {
+  nav a {
+    font-size: 1em;
+    padding: 0.5em 0.7em;
+  }
+  nav a:first-of-type {
+    margin-left: 0.6em;
+  }
+}
+/***************************************************************************************
+ * animation
+ ***************************************************************************************/
+/* header {animation: slide-down 1.2s ease 0.5s;} */
 
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+.fade {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+ 
+.fade.show {
+  opacity: 1;
+  transform: none;
+}
 
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+.fade__up {
+  transform: translate(0, 100px);
+}
+ 
+.fade__down {
+  transform: translate(0, -100px);
+}
+ 
+.fade__scaleUp {
+  transform: scale(0.5);
+}
+ 
+.fade__scaleDown {
+  transform: scale(1.5);
+}
 
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
+/***************************************************************************************
+ * keyframes
+ ***************************************************************************************/
+/* @keyframes slide-down {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0%); }
+} */
+
+@keyframes float-up {
+  0%{ transform: translateY(0); opacity: 1; }
+  100%{ transform: translateY(-2000px); opacity: 0.2; }
+}
