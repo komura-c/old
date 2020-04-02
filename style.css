@@ -109,6 +109,7 @@ nav a:active {
 
 .grid {
   display: grid;
+  grid-template-rows: 1fr;
   grid-template-columns: 50% 50%;
 }
 
@@ -374,25 +375,31 @@ footer {
   header img {
     display: none;
   }
+
   nav {
     width: 100%;
     left: 0;
     margin-left: 0;
     margin: 0 auto;
   }
+
   nav a {
     font-size: 1.4em;
     padding: 0 1.2em;
   }
+
   nav a:first-of-type {
     margin-left: 2em;
   }
+
   #profile p br{
     display: none;
   }
+
   .social {
     white-space: normal;
   }
+
   .bg-css {
     display: none;
   }
@@ -424,10 +431,6 @@ footer {
     margin-left: 0;
   }
 
-  .contact__list {
-    font-size: 1em;
-  }
-
   .production label {
     height: 7em;
   }
@@ -435,6 +438,14 @@ footer {
   dl {
     margin: 0;
     font-size: 0.8em;
+  }
+
+  .contact__list {
+    font-size: 1em;
+  }
+
+  .my-email {
+    width: 60%;
   }
 }
 
@@ -445,6 +456,34 @@ footer {
   }
   nav a:first-of-type {
     margin-left: 0.6em;
+  }
+
+  .grid {
+    grid-template-rows: 230px 1fr;
+    grid-template-columns: 1fr;
+  }
+  .profile__left {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .profile__left img {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .profile__right {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .profile__right h3 {
+    text-align: center;
+  }
+
+  .social a {
+    font-size: 2.5em;
+    margin: 0.5em;
   }
 }
 /***************************************************************************************
