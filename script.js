@@ -1,26 +1,9 @@
 /* スムーズスクロールアニメーション */
-window.onload = function () {
-  document.getElementById('link1').onclick = function () {
-    var top = getElementAbsoluteTop('profile');
-    scrollScreen(top, 20);
-    return false;
-  }
-  document.getElementById('link2').onclick = function () {
-    var top = getElementAbsoluteTop('product');
-    scrollScreen(top, 20);
-    return false;
-  }
-  document.getElementById('link3').onclick = function () {
-    var top = getElementAbsoluteTop('music');
-    scrollScreen(top, 20);
-    return false;
-  }
-  document.getElementById('link4').onclick = function () {
-    var top = getElementAbsoluteTop('contact');
-    scrollScreen(top, 20);
-    return false;
-  }
-};
+function LinkClick(id) {
+  var top = getElementAbsoluteTop(id);
+  scrollScreen(top, 20);
+  return false;
+}
 
 function getElementAbsoluteTop(id) {
   var target = document.getElementById(id);
