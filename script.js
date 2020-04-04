@@ -14,7 +14,6 @@ function getElementAbsoluteTop(id) {
 function scrollScreen(desty, time) {
   var top = Math.floor(document.documentElement.scrollTop || document.body.scrollTop);
   var tick = desty / time;
-
   var newy = top + tick;
   document.documentElement.scrollTop = newy;
   setTimeout(function () { scrollScreenInt(top, desty, newy, tick); }, 20);
@@ -22,7 +21,6 @@ function scrollScreen(desty, time) {
 
 function scrollScreenInt(starty, desty, newy, tick) {
   var stop = true;
-
   var newy = newy + tick;
   if (desty < 0) {
     if (starty + desty < newy) {
@@ -56,3 +54,11 @@ var scrollAnimationFunc = function () {
 }
 window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
+
+/* サウンドクラウド遅延読み込み */
+var soundcloud__box = document.getElementById('soundcloud__box');
+var soundcloudLazyLoad = function () {
+  var addiframe = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995476&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436888101&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
+  soundcloud__box.insertAdjacentHTML('beforebegin', addiframe);
+}
+window.addEventListener('load', soundcloudLazyLoad);

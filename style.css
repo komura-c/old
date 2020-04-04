@@ -300,7 +300,7 @@ footer {
   font-size: 15em;
   color: rgba(255, 255, 255, 0.8);
   animation: float-up 35s linear infinite;
-  bottom: -2150px;
+  bottom: -1950px;
 }
 
 .music-notes li:nth-child(1){
@@ -518,5 +518,5 @@ footer {
  ***************************************************************************************/
 @keyframes float-up {
   0%{ transform: translateY(0); opacity: 1; }
-  100%{ transform: translateY(-2650px); opacity: 0.2; }
+  100%{ transform: translateY(-2500px); opacity: 0.2; }
 }

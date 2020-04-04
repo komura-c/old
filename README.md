@@ -1,2 +1,3 @@
-# portfolio
-ポートフォリオサイト
+# komura's portfolio site
+
+komuraのポートフォリオサイト
