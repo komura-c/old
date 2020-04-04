@@ -1,7 +1,10 @@
 /* 画像遅延読み込み */
-[].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
-  img.setAttribute('src', img.getAttribute('data-src'));
-});
+const imageLazyLoad = function () {
+  [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+    img.setAttribute('src', img.getAttribute('data-src'));
+  });
+}
+window.addEventListener('load', imageLazyLoad);
 
 /* スムーズスクロールアニメーション */
 function LinkClick(id) {
