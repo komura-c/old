@@ -1,10 +1,28 @@
-/* 画像遅延読み込み */
+/* 画像&サウンドクラウド遅延読み込み */
+window.addEventListener('scroll', (e) => {
+  const scrollThreshold = document.getElementById("product__lazy").offsetTop;
+  if (window.pageYOffset >= scrollThreshold) {
+    imageLazyLoad();
+    soundcloudLazyLoad();
+  }
+});
+
 const imageLazyLoad = function () {
   [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
     img.setAttribute('src', img.getAttribute('data-src'));
+    img.onload = function () {
+      img.removeAttribute('data-src');
+    };
   });
 }
-window.addEventListener('load', imageLazyLoad);
+
+const soundcloudLazyLoad = function () {
+  const soundcloud__box = document.getElementById('soundcloud__box');
+  if (document.querySelectorAll(`iframe`).length < 3) {
+    const addiframe = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995476&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436888101&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
+    soundcloud__box.insertAdjacentHTML('beforebegin', addiframe);
+  }
+}
 
 /* スムーズスクロールアニメーション */
 function LinkClick(id) {
@@ -62,11 +80,3 @@ const scrollAnimationFunc = function () {
 }
 window.addEventListener('load', scrollAnimationFunc);
 window.addEventListener('scroll', scrollAnimationFunc);
-
-/* サウンドクラウド遅延読み込み */
-const soundcloud__box = document.getElementById('soundcloud__box');
-const soundcloudLazyLoad = function () {
-  const addiframe = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995476&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436888101&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
-  soundcloud__box.insertAdjacentHTML('beforebegin', addiframe);
-}
-window.addEventListener('load', soundcloudLazyLoad);

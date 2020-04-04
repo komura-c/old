@@ -11,7 +11,7 @@
 
 <body>
 	<header class="fade fade__down">
-		<img data-src="./img/header.png" alt="ヘッダーピアノ画像">
+		<img src="./img/header.png" alt="ヘッダーピアノ画像">
 		<nav>
 			<h1>komura's portfolio</h1>
 			<a href="#profile" onclick="return LinkClick('profile');">Profile</a>
@@ -30,7 +30,7 @@
 				</div>
 				<div class="grid">
 					<div class="profile__left">
-						<img data-src="./img/self.png" alt="コムラのプロフィール画像">
+						<img src="./img/self.png" alt="コムラのプロフィール画像">
 						<hr>
 						<div class="social">
 							<a href="https://twitter.com/komura_c/"><i class="fab fa-twitter"></i></a>
@@ -60,7 +60,7 @@
 					<h2>Product</h2>
 					<p>今まで私が作成したものです。<br>画像をクリックすると詳細が見れます。</p>
 				</div>
-				<div class="product__list">
+				<div id="product__lazy" class="product__list">
 					<div class="production">
 						<label for="portfolio">
 							<img data-src="./img/portfolio.png" alt="Portfolio">
