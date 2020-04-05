@@ -1,10 +1,7 @@
 /* 画像&サウンドクラウド遅延読み込み */
 window.addEventListener('scroll', (e) => {
-  const scrollThreshold = document.getElementById("product__lazy").offsetTop;
-  if (window.pageYOffset >= scrollThreshold) {
-    imageLazyLoad();
-    soundcloudLazyLoad();
-  }
+  imageLazyLoad();
+  soundcloudLazyLoad();
 });
 
 const imageLazyLoad = function () {

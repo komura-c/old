@@ -1,3 +1,10 @@
 *.git
 *.vscode
 .DS_Store
+node_modules
+package-lock.json
+package.json
+src
+gulpfile.js
+webpack.config.js
+dist
