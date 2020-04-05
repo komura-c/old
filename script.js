@@ -1,5 +1,5 @@
 /* 画像&サウンドクラウド遅延読み込み */
-window.addEventListener('load', (e) => {
+window.addEventListener('scroll', (e) => {
   imageLazyLoad();
   soundcloudLazyLoad();
 });
