@@ -55,15 +55,6 @@ header img {
   width: 1280px;
 }
 
-img {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-img[data-src] {
-  opacity: 0;
-}
-
 nav {
   position: fixed;
   top: 0;

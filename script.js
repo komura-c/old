@@ -1,5 +1,5 @@
 /* 画像&サウンドクラウド遅延読み込み */
-window.addEventListener('scroll', (e) => {
+window.addEventListener('load', (e) => {
   imageLazyLoad();
   soundcloudLazyLoad();
 });
@@ -20,6 +20,19 @@ const soundcloudLazyLoad = function () {
     soundcloud__box.insertAdjacentHTML('beforebegin', addiframe);
   }
 }
+
+/* スクロールフェイドアニメーション */
+const scrollAnimationElm = document.querySelectorAll('.fade');
+const scrollAnimationFunc = function () {
+  for (let i = 0; i < scrollAnimationElm.length; i++) {
+    const triggerMargin = 300;
+    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+      scrollAnimationElm[i].classList.add('show');
+    }
+  }
+}
+window.addEventListener('load', scrollAnimationFunc);
+window.addEventListener('scroll', scrollAnimationFunc);
 
 /* スムーズスクロールアニメーション */
 function LinkClick(id) {
@@ -64,16 +77,3 @@ function scrollScreenInt(starty, desty, newy, tick) {
     setTimeout(function () { scrollScreenInt(starty, desty, newy, tick); }, 20);
   }
 }
-
-/* スクロールフェイドアニメーション */
-const scrollAnimationElm = document.querySelectorAll('.fade');
-const scrollAnimationFunc = function () {
-  for (let i = 0; i < scrollAnimationElm.length; i++) {
-    const triggerMargin = 300;
-    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-      scrollAnimationElm[i].classList.add('show');
-    }
-  }
-}
-window.addEventListener('load', scrollAnimationFunc);
-window.addEventListener('scroll', scrollAnimationFunc);
