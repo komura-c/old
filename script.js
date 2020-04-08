@@ -2,11 +2,11 @@
 const soundcloudLazyLoad = () => {
   const soundcloud__box = document.getElementById('soundcloud__box');
   if (document.querySelectorAll(`iframe`).length < 3) {
-    const addiframe = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436888101&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>';
+    const addiframe = '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436346583&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>';
     soundcloud__box.insertAdjacentHTML('beforebegin', addiframe);
   }
 }
-window.addEventListener('scroll', soundcloudLazyLoad);
+window.addEventListener('scroll', soundcloudLazyLoad, { once: true });
 
 /* スクロールフェイドアニメーション */
 const scrollAnimationElm = document.querySelectorAll('.fade');

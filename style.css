@@ -40,10 +40,6 @@ hr {
   width: 80%;
 }
 
-img[data-src] {
-  display: none;
-}
-
 header {
   position: relative;
   height: 100px;
