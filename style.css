@@ -70,6 +70,7 @@ nav h1 {
 }
 
 nav a {
+  color: #fff;
   font-size: 1.6em;
   padding: 0 1em;
   line-height: 1.7;
@@ -77,20 +78,12 @@ nav a {
   transition: all 0.5s;
 }
 
-nav a:link {
-  color: #fff;
-}
-
-nav a:visited {
+nav a:link, nav a:visited, nav a:active {
   color: #fff;
 }
 
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-nav a:active {
-  color: #fff;
 }
 
 .heading {
@@ -236,11 +229,12 @@ dd{
 }
 
 .soundcloud {
+  color: #fff;
   padding: 0.1em 1em;
   transition: all 0.5s;
 }
 
-.soundcloud:visited {
+.soundcloud:link,  .soundcloud:visited, .soundcloud:active {
   color: #fff;
 }
 
@@ -268,11 +262,12 @@ dd{
 }
 
 .twitter {
+  color: #fff;
   padding: 0.1em 1em;
   transition: all 0.5s;
 }
 
-.twitter:visited {
+.twitter:link ,.twitter:visited, .twitter:active {
   color: #fff;
 }
 
