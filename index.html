@@ -2,181 +2,181 @@
 <html lang="ja">
 
 <head>
-	<meta charset="utf-8">
-	<title>komura's portfolio</title>
-	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap">
-	<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>komura's portfolio</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<header class="fade fade__down">
-		<img src="./img/header.jpeg" alt="ヘッダーピアノ画像" decoding="async">
-		<nav>
-			<h1>komura's portfolio</h1>
-			<a href="#profile" onclick="return LinkClick('profile');">Profile</a>
-			<a href="#product" onclick="return LinkClick('product');">Product</a>
-			<a href="#music" onclick="return LinkClick('music');">Music</a>
-			<a href="#contact" onclick="return LinkClick('contact');">Contact</a>
-		</nav>
-	</header>
+  <header class="fade fade__down">
+    <img src="./img/header.jpeg" alt="ヘッダーピアノ画像" decoding="async">
+    <nav>
+      <h1>komura's portfolio</h1>
+      <a href="#profile" onclick="return LinkClick('profile');">Profile</a>
+      <a href="#product" onclick="return LinkClick('product');">Product</a>
+      <a href="#music" onclick="return LinkClick('music');">Music</a>
+      <a href="#contact" onclick="return LinkClick('contact');">Contact</a>
+    </nav>
+  </header>
 
-	<main>
-		<div id="profile" class="fade fade__up">
-			<div class="container">
-				<div class="heading">
-					<h2>Profile</h2>
-					<h3>komura (Yuki Ishii)</h3>
-				</div>
-				<div class="grid">
-					<div class="profile__left">
-						<img src="./img/self.jpeg" alt="コムラのプロフィール画像" decoding="async">
-						<hr>
-						<div class="social">
-							<a href="https://twitter.com/komura_c/"><i class="fab fa-twitter"></i></a>
-							<a href="https://github.com/komura-c/"><i class="fab fa-github"></i></a>
-							<a href="https://qiita.com/komura_c/">
-								<span class="fa-stack">
-									<i class="fa fa-square fa-stack-2x"></i>
-									<i class="fa fa-search fa-stack-1x fa-inverse fa-2x"></i>
-								</span>
-							</a>
-						</div>
-					</div>
-					<div class="profile__right">
-						<h3>自己紹介</h3>
-						<p>インターネットと音楽が好きです。<br>主にプログラミングと作曲(DTM)が趣味。<br>2019年春よりRuby on
-							Railsに触れ、<br>Webサービスを開発していきたいと思い、<br>現在、Webエンジニアを目指しています。</p>
-						<h3>よく使用する技術</h3>
-						<p>HTML, CSS, Bootstrap, Javascript, <br>Ruby, Ruby on Rails, Python
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="product" class="fade fade__up">
-			<div class="container">
-				<div class="heading">
-					<h2>Product</h2>
-					<p>今まで私が作成したものです。<br>画像をクリックすると詳細が見れます。</p>
-				</div>
-				<div id="product__lazy" class="product__list">
-					<div class="production">
-						<label for="portfolio">
-							<img src="./img/portfolio.jpeg" alt="Portfolio" decoding="async">
-						</label>
-						<input type="checkbox" id="portfolio" class="cssacc">
-						<div class="accshow">
-							<dl class="product-info">
-								<dt>名前：</dt>
-								<dd>ポートフォリオサイト</dd>
-								<dt>説明：</dt>
-								<dd>このサイトです。スクロールやアニメーションなどCSSとJavascriptに力を入れました。</dd>
-								<dt>技術：</dt>
-								<dd>HTML5, CSS3, Javascript</dd>
-								<dt>URL：</dt>
-								<dd><a href="https://komura-c.github.io/portfolio/">https://komura-c.github.io/portfolio/</a></dd>
-								<dt>コード：</dt>
-								<dd><a href="https://github.com/komura-c/portfolio/">https://github.com/komura-c/portfolio/</a></dd>
-							</dl>
-						</div>
-					</div>
-					<div class="production">
-						<label for="twitgram"><img src="./img/twitgram.jpeg" alt="Twitgram" decoding="async"></label>
-						<input type="checkbox" id="twitgram" class="cssacc">
-						<div class="accshow">
-							<dl class="product-info">
-								<dt>名前：</dt>
-								<dd>Twitgram</dd>
-								<dt>説明：</dt>
-								<dd>インスタグラムのクローンアプリをTechpitの教材にて作成しました。Herokuにて画像を保存できるようにAWSのS3を使うなど独自にカスタマイズしています。</dd>
-								<dt>機能：</dt>
-								<dd>ユーザー登録、ログイン、投稿、投稿へのコメント、いいねなど</dd>
-								<dt>技術：</dt>
-								<dd>Ruby, Ruby on Rails, HTML, CSS, Bootstrap, Javascript</dd>
-								<dt>URL：</dt>
-								<dd><a href="https://twitgram0.herokuapp.com/">https://twitgram0.herokuapp.com/</a></dd>
-								<dt>コード：</dt>
-								<dd><a href="https://github.com/komura-c/twitgram/">https://github.com/komura-c/twitgram/</a></dd>
-							</dl>
-						</div>
-					</div>
-					<div class="production">
-						<label for="gourmet"><img src="./img/gourmet-matcher.jpeg" alt="Gourmet-matcher" decoding="async"></label>
-						<input type="checkbox" id="gourmet" class="cssacc">
-						<div class="accshow">
-							<dl class="product-info">
-								<dt>名前：</dt>
-								<dd>グルメマッチャー</dd>
-								<dt>説明：</dt>
-								<dd>簡単な飲食店検索アプリ。ホットペッパーのAPIを使用してみたくて作りました。
-								</dd>
-								<dt>機能：</dt>
-								<dd>検索</dd>
-								<dt>技術：</dt>
-								<dd>Ruby, Ruby on Rails, HTML, CSS, Bootstrap</dd>
-								<dt>URL：</dt>
-								<dd><a href="https://gourmet-matcher.herokuapp.com/">https://gourmet-matcher.herokuapp.com/</a></dd>
-								<dt>コード：</dt>
-								<dd><a
-										href="https://github.com/komura-c/gourmet-matcher/">https://github.com/komura-c/gourmet-matcher/</a>
-								</dd>
-							</dl>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="music" class="fade fade__up">
-			<div class="container">
-				<div class="heading">
-					<h2>Music</h2>
-					<p>今まで私が作曲したものです。<br>▷をクリックすると音楽が流れます。<br>※音量にご注意ください。</p>
-				</div>
-				<div class="music__list">
-					<div id="soundcloud__box"></div>
-					<p>その他の曲は、<span><a href="https://soundcloud.com/komura_c" class="soundcloud">Soundcloud</a></span>で聴くことができます。
-					</p>
-				</div>
-			</div>
-		</div>
-		<div id="contact" class="fade fade__up">
-			<div class="container">
-				<div class="heading">
-					<h2>Contact</h2>
-					<p>何かありましたら、<br>メール、TwitterのDMにて、<br>お気軽にご連絡ください。</p>
-				</div>
-				<div class="contact__list">
-					<a>メール:</a><input type="text" class="my-email" value="ut0p1a.c.jp@gmail.com" readonly="readonly">
-					<br><a>または</a>
-					<br><a>Twitter:</a><span><a href="https://twitter.com/komura_c" class="twitter">@komura_c</a></span>
-				</div>
-			</div>
-		</div>
-	</main>
+  <main>
+    <div id="profile" class="fade fade__up">
+      <div class="container">
+        <div class="heading">
+          <h2>Profile</h2>
+          <h3>komura (Yuki Ishii)</h3>
+        </div>
+        <div class="grid">
+          <div class="profile__left">
+            <img src="./img/self.jpeg" alt="コムラのプロフィール画像" decoding="async">
+            <hr>
+            <div class="social">
+              <a href="https://twitter.com/komura_c/"><i class="fab fa-twitter"></i></a>
+              <a href="https://github.com/komura-c/"><i class="fab fa-github"></i></a>
+              <a href="https://qiita.com/komura_c/">
+                <span class="fa-stack">
+                  <i class="fa fa-square fa-stack-2x"></i>
+                  <i class="fa fa-search fa-stack-1x fa-inverse fa-2x"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="profile__right">
+            <h3>自己紹介</h3>
+            <p>インターネットと音楽が好きです。<br>主にプログラミングと作曲(DTM)が趣味。<br>2019年春よりRuby on
+              Railsに触れ、<br>Webサービスを開発していきたいと思い、<br>現在、Webエンジニアを目指しています。</p>
+            <h3>よく使用する技術</h3>
+            <p>HTML, CSS, Bootstrap, Javascript, <br>Ruby, Ruby on Rails, Python
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="product" class="fade fade__up">
+      <div class="container">
+        <div class="heading">
+          <h2>Product</h2>
+          <p>今まで私が作成したものです。<br>画像をクリックすると詳細が見れます。</p>
+        </div>
+        <div id="product__lazy" class="product__list">
+          <div class="production">
+            <label for="portfolio">
+              <img src="./img/portfolio.jpeg" alt="Portfolio" decoding="async">
+            </label>
+            <input type="checkbox" id="portfolio" class="cssacc">
+            <div class="accshow">
+              <dl class="product-info">
+                <dt>名前：</dt>
+                <dd>ポートフォリオサイト</dd>
+                <dt>説明：</dt>
+                <dd>このサイトです。スクロールやアニメーションなどCSSとJavascriptに力を入れました。</dd>
+                <dt>技術：</dt>
+                <dd>HTML5, CSS3, Javascript</dd>
+                <dt>URL：</dt>
+                <dd><a href="https://komura-c.github.io/portfolio/">https://komura-c.github.io/portfolio/</a></dd>
+                <dt>コード：</dt>
+                <dd><a href="https://github.com/komura-c/portfolio/">https://github.com/komura-c/portfolio/</a></dd>
+              </dl>
+            </div>
+          </div>
+          <div class="production">
+            <label for="twitgram"><img src="./img/twitgram.jpeg" alt="Twitgram" decoding="async"></label>
+            <input type="checkbox" id="twitgram" class="cssacc">
+            <div class="accshow">
+              <dl class="product-info">
+                <dt>名前：</dt>
+                <dd>Twitgram</dd>
+                <dt>説明：</dt>
+                <dd>インスタグラムのクローンアプリをTechpitの教材にて作成しました。Herokuにて画像を保存できるようにAWSのS3を使うなど独自にカスタマイズしています。</dd>
+                <dt>機能：</dt>
+                <dd>ユーザー登録、ログイン、投稿、投稿へのコメント、いいねなど</dd>
+                <dt>技術：</dt>
+                <dd>Ruby, Ruby on Rails, HTML, CSS, Bootstrap, Javascript</dd>
+                <dt>URL：</dt>
+                <dd><a href="https://twitgram0.herokuapp.com/">https://twitgram0.herokuapp.com/</a></dd>
+                <dt>コード：</dt>
+                <dd><a href="https://github.com/komura-c/twitgram/">https://github.com/komura-c/twitgram/</a></dd>
+              </dl>
+            </div>
+          </div>
+          <div class="production">
+            <label for="gourmet"><img src="./img/gourmet-matcher.jpeg" alt="Gourmet-matcher" decoding="async"></label>
+            <input type="checkbox" id="gourmet" class="cssacc">
+            <div class="accshow">
+              <dl class="product-info">
+                <dt>名前：</dt>
+                <dd>グルメマッチャー</dd>
+                <dt>説明：</dt>
+                <dd>簡単な飲食店検索アプリ。ホットペッパーのAPIを使用してみたくて作りました。
+                </dd>
+                <dt>機能：</dt>
+                <dd>検索</dd>
+                <dt>技術：</dt>
+                <dd>Ruby, Ruby on Rails, HTML, CSS, Bootstrap</dd>
+                <dt>URL：</dt>
+                <dd><a href="https://gourmet-matcher.herokuapp.com/">https://gourmet-matcher.herokuapp.com/</a></dd>
+                <dt>コード：</dt>
+                <dd><a
+                    href="https://github.com/komura-c/gourmet-matcher/">https://github.com/komura-c/gourmet-matcher/</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="music" class="fade fade__up">
+      <div class="container">
+        <div class="heading">
+          <h2>Music</h2>
+          <p>今まで私が作曲したものです。<br>▷をクリックすると音楽が流れます。<br>※音量にご注意ください。</p>
+        </div>
+        <div class="music__list">
+          <div id="soundcloud__box"></div>
+          <p>その他の曲は、<span><a href="https://soundcloud.com/komura_c" class="soundcloud">Soundcloud</a></span>で聴くことができます。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="fade fade__up">
+      <div class="container">
+        <div class="heading">
+          <h2>Contact</h2>
+          <p>何かありましたら、<br>メール、TwitterのDMにて、<br>お気軽にご連絡ください。</p>
+        </div>
+        <div class="contact__list">
+          <a>メール:</a><input type="text" class="my-email" value="ut0p1a.c.jp@gmail.com" readonly="readonly">
+          <br><a>または</a>
+          <br><a>Twitter:</a><span><a href="https://twitter.com/komura_c" class="twitter">@komura_c</a></span>
+        </div>
+      </div>
+    </div>
+  </main>
 
-	<div class="bg-css">
-		<ul class="music-notes">
-			<li>&#9835;</li>
-			<li>&#9833;</li>
-			<li>&#9834;</li>
-			<li>&#9833;</li>
-			<li>&#9834;</li>
-			<li>&#9835;</li>
-			<li>&#9833;</li>
-			<li>&#9834;</li>
-			<li>&#9835;</li>
-			<li>&#9833;</li>
-		</ul>
-	</div>
+  <div class="bg-css">
+    <ul class="music-notes">
+      <li>&#9835;</li>
+      <li>&#9833;</li>
+      <li>&#9834;</li>
+      <li>&#9833;</li>
+      <li>&#9834;</li>
+      <li>&#9835;</li>
+      <li>&#9833;</li>
+      <li>&#9834;</li>
+      <li>&#9835;</li>
+      <li>&#9833;</li>
+    </ul>
+  </div>
 
-	<footer>
-		<h3>Copyright &copy; komura</h3>
-	</footer>
+  <footer>
+    <h3>Copyright &copy; komura</h3>
+  </footer>
 
-	<script type="text/javascript" src="script.js" defer></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/js/all.min.js"
-		defer></script>
+  <script type="text/javascript" src="script.js" defer></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/js/all.min.js"
+    defer></script>
 </body>
 
 </html>

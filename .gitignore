@@ -8,3 +8,4 @@ src
 gulpfile.js
 webpack.config.js
 dist
+babel.config.js
