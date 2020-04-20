@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <title>komura's portfolio</title>
   <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header class="fade fade__down">
-    <img src="./img/header.jpeg" alt="ヘッダーピアノ画像" decoding="async">
+    <img src="img/header.jpeg" alt="ヘッダーピアノ画像" decoding="async">
     <nav>
       <h1>komura's portfolio</h1>
       <a href="#profile" onclick="return LinkClick('profile');">Profile</a>
@@ -30,7 +31,7 @@
         </div>
         <div class="flex">
           <div class="profile__left">
-            <img src="./img/self.jpeg" alt="コムラのプロフィール画像" decoding="async">
+            <img src="img/self.jpeg" alt="コムラのプロフィール画像" decoding="async">
             <hr>
             <div class="social">
               <a href="https://twitter.com/komura_c/"><i class="fab fa-twitter"></i></a>
@@ -63,7 +64,7 @@
         <div id="product__lazy" class="product__list">
           <div class="production">
             <label for="portfolio">
-              <img src="./img/portfolio.jpeg" alt="Portfolio" decoding="async">
+              <img src="img/portfolio.jpeg" alt="Portfolio" decoding="async">
             </label>
             <input type="checkbox" id="portfolio" class="cssacc">
             <div class="accshow">
@@ -82,7 +83,31 @@
             </div>
           </div>
           <div class="production">
-            <label for="twitgram"><img src="./img/twitgram.jpeg" alt="Twitgram" decoding="async"></label>
+            <label for="MusicWavesVisualizer">
+              <img src="img/musicvisual.jpg" alt="MusicWavesVisualizer" decoding="async">
+            </label>
+            <input type="checkbox" id="MusicWavesVisualizer" class="cssacc">
+            <div class="accshow">
+              <dl class="product-info">
+                <dt>名前：</dt>
+                <dd>MusicWavesVisualizer</dd>
+                <dt>説明：</dt>
+                <dd>HTML5のWebAPIを使って画像と音楽を読み込んで波形動画を生成するサイトを作成しました。Javascriptに力を入れました。</dd>
+                <dt>技術：</dt>
+                <dd>HTML5, CSS3, Javascript</dd>
+                <dt>URL：</dt>
+                <dd><a
+                    href="https://komura-c.github.io/MusicWavesVisualizer/">https://komura-c.github.io/MusicWavesVisualizer/</a>
+                </dd>
+                <dt>コード：</dt>
+                <dd><a
+                    href="https://github.com/komura-c/MusicWavesVisualizer/">https://github.com/komura-c/MusicWavesVisualizer/</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="production">
+            <label for="twitgram"><img src="img/twitgram.jpeg" alt="Twitgram" decoding="async"></label>
             <input type="checkbox" id="twitgram" class="cssacc">
             <div class="accshow">
               <dl class="product-info">
@@ -98,29 +123,6 @@
                 <dd><a href="https://twitgram0.herokuapp.com/">https://twitgram0.herokuapp.com/</a></dd>
                 <dt>コード：</dt>
                 <dd><a href="https://github.com/komura-c/twitgram/">https://github.com/komura-c/twitgram/</a></dd>
-              </dl>
-            </div>
-          </div>
-          <div class="production">
-            <label for="gourmet"><img src="./img/gourmet-matcher.jpeg" alt="Gourmet-matcher" decoding="async"></label>
-            <input type="checkbox" id="gourmet" class="cssacc">
-            <div class="accshow">
-              <dl class="product-info">
-                <dt>名前：</dt>
-                <dd>グルメマッチャー</dd>
-                <dt>説明：</dt>
-                <dd>簡単な飲食店検索アプリ。ホットペッパーのAPIを使用してみたくて作りました。
-                </dd>
-                <dt>機能：</dt>
-                <dd>検索</dd>
-                <dt>技術：</dt>
-                <dd>Ruby, Ruby on Rails, HTML, CSS, Bootstrap</dd>
-                <dt>URL：</dt>
-                <dd><a href="https://gourmet-matcher.herokuapp.com/">https://gourmet-matcher.herokuapp.com/</a></dd>
-                <dt>コード：</dt>
-                <dd><a
-                    href="https://github.com/komura-c/gourmet-matcher/">https://github.com/komura-c/gourmet-matcher/</a>
-                </dd>
               </dl>
             </div>
           </div>
