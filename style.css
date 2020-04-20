@@ -301,7 +301,7 @@ footer {
   font-size: 15em;
   color: rgba(255, 255, 255, 0.8);
   animation: float-up 35s linear infinite;
-  bottom: -1950px;
+  bottom: -1800px;
 }
 
 .music-notes li:nth-child(1){
