@@ -1,16 +1,27 @@
-*, *:before, *:after {
-  box-sizing: border-box
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Noto Sans JP', sans-serif;
+html,
+body {
+  font-family: "Noto Sans JP", sans-serif;
   color: #565656;
-  background: linear-gradient(25deg, #F13F79, #FFC778, #ff8c00) no-repeat;
+  background: linear-gradient(25deg, #f13f79, #ffc778, #ff8c00) no-repeat;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6,p,a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
   padding: 0.2em 0;
   margin: 0;
 }
@@ -81,7 +92,9 @@ nav a {
   letter-spacing: 0.1rem;
 }
 
-nav a:link, nav a:visited, nav a:active {
+nav a:link,
+nav a:visited,
+nav a:active {
   color: #fff;
 }
 
@@ -113,7 +126,10 @@ nav a:hover {
   justify-content: center;
 }
 
-#profile,#product,#music,#contact {
+#profile,
+#product,
+#music,
+#contact {
   padding-top: 100px;
   margin-top: -100px;
 }
@@ -155,10 +171,12 @@ nav a:hover {
 
 .fa-stack {
   font-size: 0.5em;
-  color:#4cb10d;
+  color: #4cb10d;
 }
 
-.fa-twitter:hover, .fa-github:hover, .fa-stack:hover {
+.fa-twitter:hover,
+.fa-github:hover,
+.fa-stack:hover {
   color: #d5d5d5;
 }
 
@@ -171,7 +189,7 @@ nav a:hover {
   width: 100%;
 }
 
-.production img{
+.production img {
   height: 100%;
   transition: all 0.5s;
 }
@@ -180,7 +198,7 @@ nav a:hover {
   display: block;
   margin: 0.5em;
   padding: 0.5em;
-  cursor :pointer;
+  cursor: pointer;
   height: 15em;
   text-align: center;
   border-radius: 2em;
@@ -216,12 +234,12 @@ dl {
   font-size: 1.2em;
 }
 
-dt{
+dt {
   float: left;
   clear: left;
 }
 
-dd{
+dd {
   margin-left: 100px;
 }
 
@@ -240,7 +258,9 @@ dd{
   transition: all 0.5s;
 }
 
-.soundcloud:link,  .soundcloud:visited, .soundcloud:active {
+.soundcloud:link,
+.soundcloud:visited,
+.soundcloud:active {
   color: #fff;
 }
 
@@ -273,7 +293,9 @@ dd{
   transition: all 0.5s;
 }
 
-.twitter:link ,.twitter:visited, .twitter:active {
+.twitter:link,
+.twitter:visited,
+.twitter:active {
   color: #fff;
 }
 
@@ -294,7 +316,7 @@ footer {
   margin: 0;
 }
 
-.music-notes li{
+.music-notes li {
   position: absolute;
   display: block;
   list-style: none;
@@ -304,70 +326,70 @@ footer {
   bottom: -1800px;
 }
 
-.music-notes li:nth-child(1){
+.music-notes li:nth-child(1) {
   left: 0%;
   font-size: 10em;
   animation-delay: 0s;
   animation-duration: 17s;
 }
 
-.music-notes li:nth-child(2){
-  left: 100%;
+.music-notes li:nth-child(2) {
+  left: 90%;
   font-size: 1em;
   animation-delay: 2s;
   animation-duration: 16s;
 }
 
-.music-notes li:nth-child(3){
+.music-notes li:nth-child(3) {
   left: 3%;
   font-size: 3em;
   animation-delay: 4s;
   animation-duration: 20s;
 }
 
-.music-notes li:nth-child(4){
-  left: 97%;
+.music-notes li:nth-child(4) {
+  left: 90%;
   font-size: 5em;
   animation-delay: 6s;
   animation-duration: 14s;
 }
 
-.music-notes li:nth-child(5){
+.music-notes li:nth-child(5) {
   left: 6%;
   font-size: 6em;
   animation-delay: 2s;
   animation-duration: 10s;
 }
 
-.music-notes li:nth-child(6){
-  left: 94%;
+.music-notes li:nth-child(6) {
+  left: 83%;
   font-size: 8em;
   animation-delay: 4s;
   animation-duration: 11s;
 }
 
-.music-notes li:nth-child(7){
+.music-notes li:nth-child(7) {
   left: 9%;
   font-size: 7em;
   animation-delay: 6s;
   animation-duration: 12s;
 }
 
-.music-notes li:nth-child(8){
-  left: 91%;
+.music-notes li:nth-child(8) {
+  left: 85%;
   font-size: 2em;
   animation-delay: 2s;
   animation-duration: 13s;
 }
 
-.music-notes li:nth-child(9){
+.music-notes li:nth-child(9) {
   left: 12%;
   font-size: 4em;
   animation-delay: 4s;
   animation-duration: 9s;
 }
 
-.music-notes li:nth-child(10){
+.music-notes li:nth-child(10) {
   left: 88%;
   font-size: 9em;
   animation-delay: 6s;
@@ -406,19 +428,19 @@ footer {
   h1 {
     font-size: 1.5em;
   }
-  
+
   h2 {
     font-size: 1.5em;
   }
-  
+
   h3 {
     font-size: 1.2em;
   }
-  
+
   p {
     font-size: 1em;
   }
-  
+
   nav a {
     font-size: 1.2em;
     padding: 0.5em 0.4em;
@@ -475,7 +497,7 @@ footer {
   opacity: 0;
   transition: all 0.5s ease;
 }
- 
+
 .fade.show {
   opacity: 1;
   transform: none;
@@ -484,7 +506,7 @@ footer {
 .fade__up {
   transform: translate(0, 100px);
 }
- 
+
 .fade__down {
   transform: translate(0, -100px);
 }
@@ -493,6 +515,12 @@ footer {
  * keyframes
  ***************************************************************************************/
 @keyframes float-up {
-  0%{ transform: translateY(0); opacity: 1; }
-  100%{ transform: translateY(-2500px); opacity: 0.2; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-2000%);
+    opacity: 0.2;
+  }
 }
