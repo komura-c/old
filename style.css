@@ -239,7 +239,7 @@ a {
 }
 
 .work__img {
-  width: 400px;
+  width: 100%;
   padding-bottom: 200px;
   background: center/cover no-repeat url("assets/musicvisual.jpg");
   margin: 0 auto;
@@ -329,17 +329,5 @@ a {
 
 .footer__copyright {
   margin: 0;
-}
-
-.js-fade {
-  opacity: 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.js-fade.js-show {
-  opacity: 1;
-  -webkit-transform: none;
-          transform: none;
 }
 /*# sourceMappingURL=style.css.map */
