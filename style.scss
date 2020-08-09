@@ -1,0 +1,270 @@
+body {
+  font-family: "M PLUS 1p", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(#000000, 0.3);
+}
+
+.nav {
+  height: 100%;
+  &__list {
+    display: block;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    height: 100%;
+  }
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: #000000;
+    letter-spacing: 1.5px;
+    transition: 0.4s;
+    &:hover {
+      background-color: rgba(#9e9e9e, 0.3);
+    }
+    @media (max-width: 480px) {
+      padding: 0 4px;
+    }
+  }
+}
+
+.main {
+  padding-top: 50px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to top, #e65100, #ff9800, #ffcc80) no-repeat;
+  &__title {
+    position: absolute;
+    color: #fff;
+    letter-spacing: 2.5px;
+    font-size: 36px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  &__note {
+    position: absolute;
+    display: inline-block;
+    color: rgba(#fff, 0.8);
+    &--1 {
+      top: 60%;
+      right: 15%;
+      font-size: 1000%;
+    }
+    &--2 {
+      top: 5%;
+      left: 20%;
+      font-size: 800%;
+    }
+  }
+}
+
+.container {
+  max-width: 700px;
+  padding: 0 8px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding: 24px;
+  text-align: center;
+  &__title {
+    position: relative;
+    letter-spacing: 1.5px;
+    padding-bottom: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0px;
+      width: 60px;
+      height: 5px;
+      transform: translateX(-50%);
+      background-color: #ff9800;
+      border-radius: 2px;
+    }
+  }
+  &__my-name {
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+  &__text {
+    letter-spacing: 1.5px;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 0 auto;
+  &__left {
+    text-align: center;
+  }
+  &__self {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  &__hr {
+    width: 300px;
+    background-color: #000000;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.social {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  place-items: center;
+  &__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      opacity: 0.5;
+    }
+    &--twitter {
+      background: center/cover no-repeat url("assets/twitter-icon.png");
+    }
+    &--github {
+      background: center/cover no-repeat url("assets/github-icon.png");
+    }
+    &--qiita {
+      background: center/cover no-repeat url("assets/qiita-icon.png");
+    }
+    &--qrunch {
+      border-radius: 50%;
+      background: center/cover no-repeat url("assets/qrunch-icon.png") #16a4aa;
+    }
+  }
+}
+
+.works {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.work {
+  width: 100%;
+  &__img {
+    width: 400px;
+    padding-bottom: 200px;
+    background: center/cover no-repeat url("assets/musicvisual.jpg");
+    margin: 0 auto;
+  }
+  &__dl {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  &__dt {
+    float: left;
+    clear: left;
+  }
+  &__dd {
+    margin-left: 70px;
+  }
+}
+
+.music {
+  text-align: center;
+  &__button {
+    background-color: #ff5500;
+    border-radius: 20px;
+    color: #fff;
+    padding: 2px 16px;
+    transition: 0.4s;
+    &:link {
+      color: #fff;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  place-items: center;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  &__twitter {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: center/cover no-repeat url("assets/twitter-icon.png");
+    transition: 0.4s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &__mail {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: center/cover no-repeat url("assets/mail-icon.png");
+    transition: 0.4s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.footer {
+  background-color: #424242;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  &__copyright {
+    margin: 0;
+  }
+}
+
+.js-fade {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.js-fade.js-show {
+  opacity: 1;
+  transform: none;
+}
