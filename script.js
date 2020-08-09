@@ -1,65 +1,20 @@
-/* スクロールフェイドアニメーション */
-const scrollAnimationElm = document.querySelectorAll(".fade");
-const scrollAnimationFunc = () => {
-  for (let i = 0; i < scrollAnimationElm.length; i++) {
-    const triggerMargin = 300;
-    if (
-      window.innerHeight >
-      scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin
-    ) {
-      scrollAnimationElm[i].classList.add("show");
+$(window).scroll(function () {
+  $(".js-fade").each(function () {
+    const position = $(this).offset().top,
+      scroll = $(window).scrollTop(),
+      windowHeight = $(window).height();
+    if (scroll > position - windowHeight + 100) {
+      $(this).addClass("js-show");
     }
-  }
-};
-window.addEventListener("load", scrollAnimationFunc);
-window.addEventListener("scroll", scrollAnimationFunc);
+  });
+});
 
-/* スムーズスクロールアニメーション */
-function LinkClick(id) {
-  var top = getElementAbsoluteTop(id);
-  scrollScreen(top, 20);
+$(".js-nav-link").on("click", function () {
+  const adjust = -20,
+    speed = 400,
+    href = $(this).attr("href"),
+    target = $(href == "#" || href == "" ? "html" : href),
+    position = target.offset().top + adjust;
+  $("html").animate({ scrollTop: position }, speed, "swing");
   return false;
-}
-
-function getElementAbsoluteTop(id) {
-  var target = document.getElementById(id);
-  var rect = target.getBoundingClientRect();
-  return rect.top;
-}
-
-function scrollScreen(desty, time) {
-  var top = Math.floor(
-    document.documentElement.scrollTop || document.body.scrollTop
-  );
-  var tick = desty / time;
-  var newy = top + tick;
-  document.documentElement.scrollTop = newy;
-  setTimeout(function () {
-    scrollScreenInt(top, desty, newy, tick);
-  }, 20);
-}
-
-function scrollScreenInt(starty, desty, newy, tick) {
-  var stop = true;
-  var newy = newy + tick;
-  if (desty < 0) {
-    if (starty + desty < newy) {
-      stop = false;
-    } else {
-      newy = starty + desty;
-    }
-  } else {
-    if (newy < starty + desty) {
-      stop = false;
-    } else {
-      newy = starty + desty;
-    }
-  }
-
-  document.documentElement.scrollTop = newy;
-  if (stop == false) {
-    setTimeout(function () {
-      scrollScreenInt(starty, desty, newy, tick);
-    }, 20);
-  }
-}
+});
