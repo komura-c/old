@@ -7,10 +7,10 @@
       name="viewport"
       content="width=device-width,user-scalable=no,maximum-scale=1"
     />
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400&display=swap"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -56,7 +56,7 @@
                 src="assets/self.jpeg"
                 alt="コムラのプロフィール画像"
                 class="about__self"
-                decoding="async"
+                loading="lazy"
               />
               <hr class="about__hr" />
               <div class="social">
@@ -134,13 +134,13 @@
             </p>
           </div>
           <div class="music">
-            <object
-              data="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"
-              width="100%"
-              height="200"
+            <iframe
               class="music__content"
-            >
-            </object>
+              loading="lazy"
+              width="100%"
+              height="166"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/524995878&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            ></iframe>
             <p class="music__text">
               その他の曲は、
               <a href="https://soundcloud.com/komura_c" class="music__button"
@@ -172,11 +172,6 @@
     <footer class="footer">
       <h3 class="footer__copyright">Copyright &copy; komura</h3>
     </footer>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-3.5.1.min.js"
-      defer
-    ></script>
     <script type="text/javascript" src="script.js" defer></script>
   </body>
 </html>

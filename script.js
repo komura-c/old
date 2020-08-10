@@ -1,9 +1,18 @@
-$(".js-nav-link").on("click", function () {
-  const adjust = -20,
-    speed = 400,
-    href = $(this).attr("href"),
-    target = $(href == "#" || href == "" ? "html" : href),
-    position = target.offset().top + adjust;
-  $("html").animate({ scrollTop: position }, speed, "swing");
-  return false;
+const links = document.querySelectorAll(".js-nav-link");
+links.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const id = link.getAttribute("href").replace("#", "");
+    if (id !== "") {
+      const rectTop = document.getElementById(id).getBoundingClientRect().top,
+        position = window.pageYOffset,
+        buffer = 50,
+        top = rectTop + position - buffer;
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+    }
+    return false;
+  });
 });
